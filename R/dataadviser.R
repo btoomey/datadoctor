@@ -318,37 +318,26 @@ cols_possible_nums <- function(df, cat_cols, threshold = 5) {
 #' @export
 #'
 # Quantile too strick! Fix it. Try to leverage boxplot.stats
-detect_outlier_single <- function(s, strategy = '3sigma',
-                                  IQR_coef =  1.5,
-                                  return_stats = TRUE) {
+detect_outlier_single <- function (s, strategy = "3sigma", IQR_coef = 1.5, return_records = TRUE){
   if (any(is.na(s))) {
-    stop("[Error] There are missing values in the column.
-         Please drop or impute the column first.")
+    stop("[Error] There are missing values in the column.\n Please drop or impute the column first.")
   }
-
-  if (strategy == '3sigma') {
-    outliers <- s[abs(s-mean(s)) > 3*sd(s)]
+  if (strategy == "3sigma") {
+    outliers <- s[abs(s - mean(s)) > 3 * sd(s)]
   }
-  else if (strategy == 'quantile') {
+  else if (strategy == "quantile") {
     res <- boxplot.stats(s, coef = IQR_coef)
     outliers <- res$out
-  } else {
+  }
+  else {
     stop("[Error] The supported strategies are: 'quantile' and '3sigma'.")
   }
-
-  nOutliers <- length(outliers)
-  if (nOutliers)
-    outlier_exist <- TRUE
-  else
-    outlier_exist <- FALSE
-
-  if (return_stats)
-    return(list(exist = outlier_exist,
-                numberOutlier = nOutliers,
-                percentageOutlier = nOutliers / length(s)))
-  else
+  if (return_records)
     return(outliers)
-  }
+  else if (length(outliers))
+    return(TRUE)
+  else return(FALSE)
+}
 
 
 detect_outlier <- function(df, cols = NULL, strategy = '3sigma',
