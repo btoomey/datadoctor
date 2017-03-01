@@ -1,0 +1,11 @@
+Package: datadoctor
+Title: Data Doctor
+Version: 0.0.0.9000
+Authors@R: person("Dan", "Putler", email = "dputler@alteryx.com", role = c("aut", "cre"))
+Description: Data Doctor.
+Depends:
+    R (>= 3.3.2)
+License: LGPL3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1

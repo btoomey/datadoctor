@@ -1,0 +1,3359 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.0">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="234"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Donate" selected="True"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Donate" size="64" source="Formula: [Donate2]" type="String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="330"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Donate" selected="False"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Degrees" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="First_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Last_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Undergraduate" size="64" source="Formula: IF [Undergradu] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="First_School" size="64" source="Formula: IF [First_School] == &quot;HK&quot; THEN &quot;PE&quot; ELSE [First_School] ENDIF" type="String"/>
+            <Field name="Last_School" size="64" source="Formula: IF [Last_School] == &quot;CO&quot; THEN &quot;BU&quot; ELSE [Last_School] ENDIF" type="String"/>
+            <Field name="Faculty_Staff" size="64" source="Formula: IF [Faculty_St] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intercollegiate" size="64" source="Formula: IF [Intercolle] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intramural" size="64" source="Formula: [Intramural2]" type="String"/>
+            <Field name="Other_Activities" size="64" source="Formula: IF [Other_Acti] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Gender" size="64" source="Formula: [Gender2]" type="String"/>
+            <Field name="Child" size="64" source="Formula: [Child2]" type="String"/>
+            <Field name="Parent" size="64" source="Formula: [Parent2]" type="String"/>
+            <Field name="Spouse" size="64" source="Formula: [Spouse2]" type="String"/>
+            <Field name="Telephone" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Mail" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Personal" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Combined" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="402" y="282"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False"/>
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True"/>
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Donate" size="64" source="Formula: [Donate2]" type="String"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Donate" size="64" source="Formula: [Donate2]" type="String"/>
+            <Field name="Degrees" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="First_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Last_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Undergraduate" size="64" source="Formula: IF [Undergradu] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="First_School" size="64" source="Formula: IF [First_School] == &quot;HK&quot; THEN &quot;PE&quot; ELSE [First_School] ENDIF" type="String"/>
+            <Field name="Last_School" size="64" source="Formula: IF [Last_School] == &quot;CO&quot; THEN &quot;BU&quot; ELSE [Last_School] ENDIF" type="String"/>
+            <Field name="Faculty_Staff" size="64" source="Formula: IF [Faculty_St] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intercollegiate" size="64" source="Formula: IF [Intercolle] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intramural" size="64" source="Formula: [Intramural2]" type="String"/>
+            <Field name="Other_Activities" size="64" source="Formula: IF [Other_Acti] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Gender" size="64" source="Formula: [Gender2]" type="String"/>
+            <Field name="Child" size="64" source="Formula: [Child2]" type="String"/>
+            <Field name="Parent" size="64" source="Formula: [Parent2]" type="String"/>
+            <Field name="Spouse" size="64" source="Formula: [Spouse2]" type="String"/>
+            <Field name="Telephone" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Mail" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Personal" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Combined" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Degrees" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="First_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Last_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Undergraduate" size="64" source="Formula: IF [Undergradu] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="First_School" size="64" source="Formula: IF [First_School] == &quot;HK&quot; THEN &quot;PE&quot; ELSE [First_School] ENDIF" type="String"/>
+            <Field name="Last_School" size="64" source="Formula: IF [Last_School] == &quot;CO&quot; THEN &quot;BU&quot; ELSE [Last_School] ENDIF" type="String"/>
+            <Field name="Faculty_Staff" size="64" source="Formula: IF [Faculty_St] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intercollegiate" size="64" source="Formula: IF [Intercolle] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intramural" size="64" source="Formula: [Intramural2]" type="String"/>
+            <Field name="Other_Activities" size="64" source="Formula: IF [Other_Acti] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Gender" size="64" source="Formula: [Gender2]" type="String"/>
+            <Field name="Child" size="64" source="Formula: [Child2]" type="String"/>
+            <Field name="Parent" size="64" source="Formula: [Parent2]" type="String"/>
+            <Field name="Spouse" size="64" source="Formula: [Spouse2]" type="String"/>
+            <Field name="Telephone" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Mail" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Personal" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Combined" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin"/>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxRPluginGui.R">
+        <Position x="498" y="282"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RScript>library("datadoctor")
+library("moments")
+library("splines")
+library("AlteryxPredictive")
+
+trimNewlines &lt;- function (x) {
+  if (!is.character(x)) {
+    stop("The argument \"x\" must be a character vector.")
+  }
+  AlteryxPredictive:::trim.blanks(sub("\\n", "", x))
+}
+
+
+## The initial data prep
+# Read in the data
+the_data &lt;- read.Alteryx2("#1", default = eggs)
+# Make sure that the target isn't in the set of predictors
+the_vars &lt;- names(the_data)
+duplicated_var &lt;- paste0("Right_", the_vars[1])
+if (duplicated_var %in% the_vars[2:length(the_vars)]) {
+  the_preds &lt;- the_vars[2:length(the_vars)]
+  the_preds &lt;- the_preds[!(the_preds %in% duplicated_var)]
+  the_vars &lt;- c(the_vars[1], the_preds)
+  the_data &lt;- the_data[, the_vars]
+}
+# Make sure not everything is a factor. This corresponds to the case where a
+# CSV is brought in and not been run through the Auto Field tool or not "typed"
+# in any other way
+all_are_factors &lt;- all(sapply(the_data, class) == "factor")
+# Address white space only values in the variables
+the_data &lt;- change_missing_to_na(the_data)
+# Remove records that have missing values in the target variable
+num_target_missing &lt;- sum(as.numeric(is.na(the_data[[1]])))
+the_data &lt;- the_data[!is.na(the_data[[1]]),]
+# Remove the single value columns
+single_value_columns &lt;- cols_with_unique_val(the_data, names(the_data))
+target_name &lt;- names(the_data)[1]
+if (target_name %in% single_value_columns) {
+  stop.Alteryx("The selected target variable contains only a single value, so cannot be used to create a predictive model.")
+}
+the_data &lt;- the_data[,!(names(the_data) %in% single_value_columns)]
+
+## The report text for variables with only a single value
+unary_report_text &lt;- character(0)
+if (length(single_value_columns) == 1) {
+  unary_report_text &lt;- paste("The column", single_value_columns, "contains only a single value, and is dropped from the analysis.")
+}
+if (length(single_value_columns) &gt; 1) {
+  unary_report_text &lt;- paste("The columns:", formattedTextList(single_value_columns), "each contain only a single value, and are dropped from the analysis.")
+}
+
+## Target variable analysis
+the_target &lt;- the_data[, 1, drop = FALSE]
+# Conversion status indicators for the target
+target_converted_to_int &lt;- FALSE
+target_converted_to_factor &lt;- FALSE
+target_converted_to_number &lt;- FALSE
+target_may_be_count &lt;- FALSE
+# Make sure a numeric target isn't an integer in disguise and convert if it is
+if (class(the_target[[1]]) == "numeric") {
+  target_is_int &lt;- unlist(cols_numeric_is_integer(the_target, target_name))
+  if (length(target_is_int) &gt; 0) {
+    the_target[[1]] &lt;- as.integer(the_target[[1]])
+    target_converted_to_int &lt;- TRUE
+  }
+}
+# See if an integer is likely to be a factor, and convert it if it is
+if (class(the_target[[1]]) == "integer") {
+  target_is_factor &lt;- FALSE
+  target_num_levels &lt;- length(unique(the_target[, 1]))
+  target_vals_sqntl &lt;- unlist(cols_int_sequential(the_target, target_name))
+  if (target_num_levels == 2) {
+    target_is_factor &lt;- TRUE
+  }
+  if (target_num_levels &gt; 2 &amp;&amp; target_num_levels &lt; 11 &amp;&amp; length(target_vals_sqntl) &gt; 0) {
+    target_is_factor &lt;- TRUE
+  }
+  if (target_is_factor) {
+    the_target[[1]] &lt;- as.factor(the_target[[1]])
+    target_converted_to_factor &lt;- TRUE
+  }
+}
+# See if a factor variable is actually a number and covert it if it is
+if (class(the_target[[1]]) == "factor") {
+  target_converted_to_number &lt;- cols_factor_is_number(the_target, target_name)
+  if (target_converted_to_number) {
+    the_target[[1]] &lt;- as.numeric(the_target[[1]])
+  }
+}
+# Examine other potential issues with the target
+if (class(the_target[[1]]) == "factor") {
+  target_num_levels &lt;- length(unique(the_target[, 1]))
+  target_level_counts &lt;- summary(the_target[, 1], maxsum = length(unique(the_target[, 1])))
+}
+if (class(the_target[[1]]) != "factor") {
+  target_skew &lt;- skewness(the_target[[1]])
+  target_outliers &lt;- if (target_skew &gt; 1.5 &amp;&amp; min(the_target[, 1]) &gt; 0) {
+    detect_outlier_single(log(the_target[, 1]), strategy = "3sigma")
+  } else {
+    detect_outlier_single(the_target[, 1], strategy = "3sigma")
+  }
+}
+if (class(the_target[[1]]) == "integer" &amp;&amp; min(the_target[[1]]) &lt; 51 &amp;&amp; max(the_target[[1]]) &lt; 2000) {
+  target_may_be_count &lt;- TRUE
+}
+
+## Create the target variable analysis report elements
+# Report the target variable name
+target_report_text &lt;- paste0("The target column used in the analysis is ", target_name, ",")
+# Report the type of the target variable, and whether the type was changed
+if (!target_converted_to_factor) {
+  if (class(the_target[[1]]) == "factor") {
+    target_type &lt;- "a categorical column."
+  }
+  if (class(the_target[[1]]) == "integer") {
+    target_type &lt;- "an integer column."
+  }
+  if (class(the_target[[1]]) == "numeric") {
+    target_type &lt;- "a non-integer numeric column."
+  }
+  target_type_text &lt;- paste0("which is ", target_type)
+}
+if (target_converted_to_int &amp;&amp; target_converted_to_factor) {
+  target_type_text &lt;- "which is a non-integer numeric column that appears to actually be a categorical column. It is treated as a categorical column for this analysis."
+}
+if (!target_converted_to_int &amp;&amp; target_converted_to_factor) {
+  target_type_text &lt;- "which is an integer numeric column that appears to actually be a categorical variable. It is treated as a categorical variable for this analysis."
+}
+if (target_converted_to_number) {
+  target_type_text &lt;- "which is a categorical column that appears to actually be a numeric variable. It is treated as a numeric variable for this analysis."
+}
+if (class(the_target[[1]]) == "factor") {
+  target_num_levels &lt;- length(levels(the_target[[1]]))
+  if (target_num_levels == 2) {
+    target_type_text &lt;- paste(target_type_text, "The target column has two levels, so it is what is known as a binomial variable.")
+  } else {
+    target_type_text &lt;- paste(target_type_text, paste0("The target column has", target_num_levels, "levels, so it is what is known as multinomial in nature."))
+  }
+}
+
+target_report_text &lt;- paste(target_report_text, target_type_text)
+if (class(the_target[[1]]) != "factor") {
+  target_report_text &lt;- paste(target_report_text, paste0("The skewness of the target is ", round(target_skew, 2), "."))
+  if (target_may_be_count) {
+    target_report_text &lt;- paste(target_report_text, "The target may also represent count data.")
+  }
+}
+# Report the number of rows with missing values of the target have been removed
+if (num_target_missing == 1) {
+  target_report_text &lt;- paste(target_report_text, "There is one record with a missing value for this column, and that record has been removed from the analysis.")
+}
+if (num_target_missing &gt; 1) {
+  target_report_text &lt;- paste(target_report_text, "There are", num_target_missing, "records with missing values for this column, and those records have been removed from the analysis.")
+}
+# Report other potential issues associated with the target
+target_other_text &lt;- NULL
+if (class(the_target[[1]]) == "factor") {
+  target_level_counts &lt;- target_level_counts[order(target_level_counts, decreasing = TRUE)]
+  ratio_1_2 &lt;- target_level_counts[1]/target_level_counts[2]
+  ratio_value &lt;- round(ratio_1_2, 1)
+  # The case of low counts in at least one of the levels
+  if (min(target_level_counts) &lt; 10) {
+    target_other_text &lt;- " In addition, the target column has categories with low count levels"
+    if (ratio_1_2 &lt; 1.5) {
+      target_other_text &lt;- paste0(target_other_text, ".")
+    }
+    if (ratio_1_2 &gt;= 1.5 &amp;&amp; ratio_1_2 &lt; 3) {
+      target_other_text &lt;- paste0(target_other_text, ", and represents an unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level.")
+    }
+    if (ratio_1_2 &gt;= 3 &amp;&amp; ratio_1_2 &lt; 6) {
+      target_other_text &lt;- paste0(target_other_text, ", and represents a very unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level. This imbalance in the target column may cause some modeling methods, such as a Decision Tree model, to perform poorly.")
+      if (length(target_level_counts) == 2) {
+        target_other_text &lt;- paste(target_other_text,  "Consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      }
+   }
+    if (ratio_1_2 &gt;= 6) {
+      target_other_text &lt;- paste0(target_other_text, ", and represents an extremely unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level. This imbalance in the target column is likely to cause some modeling methods, such as a Decision Tree model, to perform poorly. Strongly consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      if (length(target_level_counts) == 2) {
+        target_other_text &lt;- paste(target_other_text,  "Strongly consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      }
+    }
+  }
+  if (min(target_level_counts) &gt;= 10) {
+    if (ratio_1_2 &lt; 1.5) {
+      target_other_text &lt;- NULL
+    }
+    if (ratio_1_2 &gt;= 1.5 &amp;&amp; ratio_1_2 &lt; 3) {
+      target_other_text &lt;- paste0(" The target represents an unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level.")
+    }
+    if (ratio_1_2 &gt;= 3 &amp;&amp; ratio_1_2 &lt; 6) {
+      target_other_text &lt;- paste0(" The target represents a very unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level. This imbalance in the target column may cause some modeling methods, such as a Decision Tree model, to perform poorly.")
+      if (length(target_level_counts) == 2) {
+        target_other_text &lt;- paste(target_other_text,  "Consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      }
+    }
+    if (ratio_1_2 &gt;= 6) {
+      target_other_text &lt;- paste0(" The target represents an extremely unbalanced sample, with the most common level being ", ratio_value, " times more numerious than the next most common level. This imbalance in the target column is likely to cause some modeling methods, such as a Decision Tree model, to perform poorly. Stongly consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      if (length(target_level_counts) == 2) {
+        target_other_text &lt;- paste(target_other_text,  "Strongly consider the use of the Oversample Field tool to provide an analysis data set with a more balanced target.")
+      }
+    }
+  }
+}
+if (class(the_target[[1]]) != "factor") {
+  if (length(target_outliers) &gt; 0) {
+    target_other_text &lt;- " In addition, the target variable contains outlier values."
+  }
+}
+target_report_text &lt;- paste0(target_report_text, target_other_text)
+grp_out &lt;- if (length(unary_report_text) &gt; 0) {
+  data.frame(grp = c("Target text", "Single value predictor"), out = c(target_report_text, unary_report_text))
+} else {
+  data.frame(grp = "Target text", out = target_report_text)
+}
+
+## Predictor field types analysis and possible reassignment
+# Get the initial field types
+if (!all_are_factors) {
+  pred_types &lt;- get_col_types(the_data[, -1])
+  orig_factors &lt;- pred_types$factor_cols
+  orig_integers &lt;- pred_types$integer_cols
+  orig_numerics &lt;- pred_types$numeric_cols
+} else {
+  orig_factors &lt;- names(the_data)[-1]
+  orig_integers &lt;- character(0)
+  orig_numerics &lt;- character(0)
+}
+# Initialize current variables
+current_factors &lt;- orig_factors
+current_integers &lt;- orig_integers
+current_numerics &lt;- orig_numerics
+# Look at field names for clues surrounding numeric codes. This is currently
+# US centric, so will need to be expanded to implement i18n
+lc_factors &lt;- tolower(orig_factors)
+zip_vars &lt;- orig_factors[grepl("zip", lc_factors)]
+post_vars &lt;- orig_factors[grepl("post", lc_factors)]
+fips_vars &lt;- orig_factors[grepl("fips", lc_factors)]
+code_vars &lt;- orig_factors[grepl("code", lc_factors)]
+special_names &lt;- unique(c(zip_vars, post_vars, fips_vars, code_vars))
+# There are two cases. The first is when not all fields are factors, the second
+# is when all fields are factors. The difference is that a reduced amount of
+# checking and conversion is needed when are fields are factors.
+# Start with data types that are only relevant when not all fields are factors.
+if (!all_are_factors) {
+  # Check to see if there are integers disguised as numeric fields and convert
+  numerics_are_integers &lt;- cols_int_sequential(the_data, orig_numerics)
+  if (length(numerics_are_integers) &gt; 0) {
+    the_data &lt;- change_numeric_to_int(the_data, numerics_are_integers)
+    current_integers &lt;- c(orig_integers, numerics_are_integers)
+    current_numerics &lt;- current_numerics[!(current_numerics %in% numerics_are_integers)]
+  }
+  # Check to see if there are categoricals disguised as integers and convert.
+  integers_are_categoricals &lt;- cols_int_is_categorical(the_data, current_integers)
+  if (length(integers_are_categoricals) &gt; 0) {
+    the_data &lt;- change_int_to_factor(the_data, integers_are_categoricals)
+    current_integers &lt;- current_integers[!(current_integers %in% integers_are_categoricals)]
+    current_factors &lt;- c(orig_factors, integers_are_categoricals)
+  }
+  # Check to see if there are numeric codes disguised as integers and convert.
+  # Possible ZIP codes
+  if (length(zip_vars) &gt; 0) {
+    # The variables that contain "zip" in the name and are integers
+    int_zip_vars &lt;- zip_vars[zip_vars %in% current_integers]
+    test_int_zip_vars &lt;- logical(0)
+    for (i in int_zip_vars) {
+      this_vector &lt;- eval(parse(text = paste0("the_data[[", i, "]]")))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      this_test &lt;- if (max(this_no_na) &lt; 99951 &amp;&amp; min(this_no_na) &gt; 500) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_int_zip_vars &lt;- c(test_int_zip_vars, this_test)
+    }
+    # Convert apparent ZIP code integer fields to categoricals
+    if (any(test_int_zip_vars)) {
+      the_data &lt;- change_int_to_factor(the_data, int_zip_vars[test_int_zip_vars])
+      current_factors &lt;- c(current_factors, int_zip_vars[test_int_zip_vars])
+      current_integers &lt;- current_integers[!(current_integers %in% int_zip_vars[test_int_zip_vars])]
+    }
+  }
+  # Possible postal codes
+  if (length(post_vars[!(post_vars %in% zip_vars)]) &gt; 0) {
+    post_vars &lt;- post_vars[!(post_vars %in% zip_vars)]
+    # The variables that contain "post" in the name and are integers
+    int_post_vars &lt;- post_vars[post_vars %in% current_integers]
+    test_int_post_vars &lt;- logical(0)
+    for (i in int_post_vars) {
+      this_vector &lt;- eval(parse(text = paste0("the_data[[", i, "]]")))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      this_test &lt;- if (max(this_no_na) &lt; 99951 &amp;&amp; min(this_no_na) &gt; 500) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_int_post_vars &lt;- c(test_int_post_vars, this_test)
+    }
+    # Convert apparent post code integer fields to categoricals
+    if (any(test_int_post_vars)) {
+      the_data &lt;- change_int_to_factor(the_data, int_post_vars[test_int_post_vars])
+      current_factors &lt;- c(current_factors, int_post_vars[test_int_post_vars])
+      current_integers &lt;- current_integers[!(current_integers %in% int_post_vars[test_int_post_vars])]
+    }
+  }
+  # Possible state FIPS codes (other geographies are not addressed)
+  if (length(fips_vars) &gt; 0) {
+    num_st_fips &lt;- c(1, 2, 60, 4, 5, 81, 6, 8, 9, 10, 11, 64, 12, 13, 66, 15, 84, 16, 17, 18, 19, 86, 67, 20, 21, 89, 22, 23, 68, 24, 25, 26, 71, 27, 28, 29, 30, 76, 31, 32, 33, 34, 35, 36, 37, 38, 69, 39, 40, 41, 70, 95, 42, 72, 44, 45, 46, 47, 48, 74, 49, 50, 78, 51, 79, 53, 54, 55, 56)
+    # The variables that contain "fips" in the name and are integers
+    int_fips_vars &lt;- fips_vars[fips_vars %in% current_integers]
+    test_int_fips_vars &lt;- logical(0)
+    for (i in int_fips_vars) {
+      this_vector &lt;- eval(parse(text = paste0("the_data[[", i, "]]")))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      this_test &lt;- if (all(this_no_na %in% num_st_fips)) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_int_fips_vars &lt;- c(test_int_fips_vars, this_test)
+    }
+    # Convert apparent state FIPS code integer fields to categoricals
+    if (any(test_int_fips_vars)) {
+      the_data &lt;- change_int_to_factor(the_data, int_fips_vars[test_int_fips_vars])
+      current_factors &lt;- c(current_factors, int_fips_vars[test_int_fips_vars])
+      current_integers &lt;- current_integers[!(current_integers %in% int_fips_vars[test_int_fips_vars])]
+    }
+  }
+  # Variables with the word "code" in their name that have not already been addressed
+  if (length(code_vars[!(code_vars %in% unique(c(zip_vars, post_vars, fips_vars)))]) &gt; 0) {
+    code_vars &lt;- code_vars[!(code_vars %in% unique(c(zip_vars, post_vars, fips_vars)))]
+    # The variables that contain "code" in the name and are integers
+    int_code_vars &lt;- code_vars[code_vars %in% current_integers]
+    # Convert all the fields that contain the word code in their name to factors
+    the_data &lt;- change_int_to_factor(the_data, int_code_vars)
+    current_factors &lt;- c(current_factors, int_code_vars)
+    current_integers &lt;- current_integers[!(current_integers %in% int_code_vars)]
+  }
+}
+# Check to see if there are numbers disguised as categoricals and convert
+if (length(orig_factors) &gt; 0) {
+  # Start with variables that do not appear to be numeric codes
+  relevant_factors &lt;- orig_factors[!(orig_factors %in% special_names)]
+  test_factors_are_numbers &lt;- cols_factor_is_number(the_data, relevant_factors)
+  factors_are_numbers &lt;- relevant_factors[test_factors_are_numbers]
+  if (length(factors_are_numbers) &gt; 0) {
+    the_data &lt;- change_factor_to_number(the_data, factors_are_numbers)
+  }
+  current_factors &lt;- current_factors[!(current_factors %in% factors_are_numbers)]
+  current_numerics &lt;- c(current_numerics, factors_are_numbers)
+  # Address the fields that are categoricals and have names that suggest that
+  # they may be numerical codes. This will need to be sent through an i18n process
+  # Possible ZIP codes
+  if (length(zip_vars) &gt; 0) {
+    # The variables that contain "zip" in the name and are factors
+    fac_zip_vars &lt;- zip_vars[zip_vars %in% current_factors]
+    test_fac_zip_vars &lt;- logical(0)
+    for (i in fac_zip_vars) {
+      this_vector &lt;- eval(parse(text = paste0('the_data[["', i, '"]]')))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      ## THIS CAN BE IMPROVED, BUT IT REQUIRES A TEST TO SEE IF THE FIELD CAN BE AN INTEGER
+      this_test &lt;- if (max(nchar(as.character(this_no_na))) &lt; 6 &amp;&amp; min(nchar(as.character(this_no_na))) &gt; 2) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_fac_zip_vars &lt;- c(test_fac_zip_vars, this_test)
+    }
+    # Convert fields with "zip" in the name that do not appear to be zip codes,
+    # but which do appear to be numeric
+    if (any(!test_fac_zip_vars)) {
+      factors_are_numbers &lt;- cols_factor_is_number(the_data, fac_zip_vars[!test_fac_zip_vars])
+      if (length(factors_are_numbers) &gt; 0) {
+        the_data &lt;- change_factor_to_number(the_data, factors_are_numbers)
+        current_numerics &lt;- c(current_numerics, factors_are_numbers)
+        current_factors &lt;- current_factors[!(current_factors %in% factors_are_numbers)]
+      }
+    }
+  }
+  # Possible postal codes
+  if (length(post_vars[!(post_vars %in% zip_vars)]) &gt; 0) {
+    post_vars &lt;- post_vars[!(post_vars %in% zip_vars)]
+    # The variables that contain "post" in the name and are factors
+    fac_post_vars &lt;- post_vars[post_vars %in% current_factors]
+    test_fac_post_vars &lt;- logical(0)
+    for (i in fac_post_vars) {
+      this_vector &lt;- eval(parse(text = paste0('the_data[["', i, '"]]')))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      this_test &lt;- if (all(nchar(as.character(this_no_na)) &lt;= 5)) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_fac_post_vars &lt;- c(test_fac_post_vars, this_test)
+    }
+    # Convert fields with "post" in the name that do not appear to be postal codes,
+    # but which do appear to be numeric
+    if (any(!test_fac_post_vars)) {
+      factors_are_numbers &lt;- cols_factor_is_number(the_data, fac_post_vars[!test_fac_post_vars])
+      if (length(factors_are_numbers) &gt; 0) {
+        the_data &lt;- change_factor_to_number(the_data, factors_are_numbers)
+        current_numerics &lt;- c(current_numerics, factors_are_numbers)
+        current_factors &lt;- current_factors[!(current_factors %in% factors_are_numbers)]
+      }
+    }
+  }
+  # Possible state FIPS codes. Note: Other geographies are not examined.
+  if (length(fips_vars) &gt; 0) {
+    chr_st_fips &lt;- c("1", "01", "2", "02", "60", "4", "04", "5", "05", "81", "6", "06", "8", "08", "9", "09", "10", "11", "64", "12", "13", "66", "15", "84", "16", "17", "18", "19", "86", "67", "20", "21", "89", "22", "23", "68", "24", "25", "26", "71", "27", "28", "29", "30", "76", "31", "32", "33", "34", "35", "36", "37", "38", "69", "39", "40", "41", "70", "95", "42", "72", "44", "45", "46", "47", "48", "74", "49", "50", "78", "51", "79", "53", "54", "55", "56")
+    # The variables that contain "fips" in the name and are factors
+    fac_fips_vars &lt;- fips_vars[fips_vars %in% current_factors]
+    test_fac_fips_vars &lt;- logical(0)
+    for (i in fac_fips_vars) {
+      this_vector &lt;- eval(parse(text = paste0('the_data[["', i, '"]]')))
+      this_no_na &lt;- this_vector[!is.na(this_vector)]
+      this_test &lt;- if (all(as.character(this_no_na)) %in% chr_st_fips) {
+        TRUE
+      } else {
+        FALSE
+      }
+      test_fac_fips_vars &lt;- c(test_fac_fips_vars, this_test)
+    }
+    # Convert fields with "fips" in the name that do not appear to be state FIPS
+    # codes, but which do appear to be numeric
+    if (any(!test_fac_fips_vars)) {
+      factors_are_numbers &lt;- cols_factor_is_number(the_data, fac_fips_vars[!test_fac_fips_vars])
+      if (length(factors_are_numbers) &gt; 0) {
+        the_data &lt;- change_factor_to_number(the_data, factors_are_numbers)
+        current_numerics &lt;- c(current_numerics, factors_are_numbers)
+        current_factors &lt;- current_factors[!(current_factors %in% factors_are_numbers)]
+      }
+    }
+  }
+}
+
+## Predictor field types reporting
+# Determine how the field types have been changed
+orig_numbers &lt;- c(orig_integers, orig_numerics)
+current_numbers &lt;- c(current_integers, current_numerics)
+changed_to_factor &lt;- orig_numbers[!(orig_numbers %in% current_numbers)]
+changed_to_number &lt;- orig_factors[!(orig_factors %in% current_factors)]
+all_changed_type &lt;- c(changed_to_factor, changed_to_number)
+type_all_factors &lt;- character(0)
+# If any fields have changed type, then prepare the table and text elements
+if (length(all_changed_type) &gt; 0) {
+  # The table elements of the report
+  change_status &lt;- all_changed_type %in% changed_to_factor
+  from_number &lt;- from_factor &lt;- rep("X", length(change_status))
+  from_number[!change_status] &lt;- " "
+  from_factor[change_status] &lt;- " "
+  type_table &lt;- paste(all_changed_type, from_number, from_factor, sep = "|")
+  # Let the user know that they did not appear to use an Auto Field or similar
+  # tool to correct the data. This is most likely to occur when the input data
+  # is a text file.
+  if (all_are_factors &amp;&amp; length(all_changed_type) &gt; 0) {
+    type_all_factors &lt;- "All of the incoming columns are string types, but they do not all appear to be strings. Consider using an Auto Field tool on the data prior to connecting the stream to the Predictive Adviser tool."
+  }
+  # The text elements of the report
+  type_text &lt;- if (length(all_changed_type) == 1) {
+    "There appears to be a column where changing the data type may be warranted."
+  } else {
+    "There appear to be several columns where changing their data type may be warranted."
+  }
+  # The case where there are issues with both categorical and continuous fields
+  if (length(changed_to_factor) &gt; 0 &amp;&amp; length(changed_to_number) &gt; 0) {
+    type_text1 &lt;- if (length(changed_to_factor) == 1) {
+      paste("The column", changed_to_factor, "is likely a categorical. Consider changing the data type of this column to a V_WString using a Select Tool. For this analysis only, the columns that appear to be categories is converted to categorical.")
+    } else {
+      paste("The columns:", formattedTextList(changed_to_factor), "are likely to be categorical. Consider changing the data types of these columns to V_WString using a Select Tool. For this analysis only, the columns that appear to be categories are converted to categoricals.")
+    }
+    type_text2 &lt;- if (length(changed_to_number) == 1) {
+      paste("Similarly, the column", changed_to_number, "is likely to be a numeric. Consider changing the data type of this column to a Double using a Select Tool. For this analysis only, the column that appears to be numeric is converted to numeric.")
+    } else {
+      paste("Similarly, the columns:", formattedTextList(changed_to_number), "are likely to be numeric. Consider changing the data types of these columns to Doubles using a Select tool. For this analysis only, the columns that appear to be numbers are converted to numbers.")
+    }
+    type_text1 &lt;- paste(type_text1, type_text2)
+  }
+  # The case where there are issues only with the categorical fields
+  if (length(changed_to_factor) &gt; 0 &amp;&amp; length(changed_to_number) == 0) {
+    type_text1 &lt;- if (length(changed_to_factor) == 1) {
+      paste("The column", changed_to_factor, "is likely a categorical. Consider changing the data type of this column to a V_WString using a Select Tool.")
+    } else {
+      paste("The columns:", formattedTextList(changed_to_factor), "are likely to be categorical. Consider changing the data types of these columns to V_WString using a Select Tool.")
+    }
+  }
+  # The case where there are issues only with the continuous fields
+  if (length(changed_to_factor) == 0 &amp;&amp; length(changed_to_number) &gt; 0) {
+    type_text1 &lt;- if (length(changed_to_number) == 1) {
+      paste("The column", changed_to_number, "is likely numeric. Consider changing the data type of this column to a Double using a Select Tool.")
+    } else {
+      paste("The columns:", formattedTextList(changed_to_number), "are likely to be numeric. Consider changing the data types of these columns to Doubles using a Select Tool.")
+    }
+  }
+  type_text &lt;- paste(type_text, type_text1)
+  # Prepare the type analysis elements for output
+  type_report &lt;- data.frame(grp = c(rep("Type table", length(type_table)), "Type text"), out = c(type_table, type_text))
+} else {
+  type_text &lt;- if (length(unary_report_text) &gt; 0) {
+    "All of the columns that have more than a single value appear to be of the appropriate data type."
+  } else {
+    "All of the columns appear to be of the appropriate data type."
+  }
+  type_report &lt;- data.frame(grp = "Type text", out = type_text)
+}
+if (length(type_all_factors) &gt; 0) {
+  type_report &lt;- rbind(data.frame(grp = "Type all factors", out = type_all_factors), type_report)
+}
+grp_out &lt;- rbind(grp_out, type_report)
+
+### ANALYSIS OF PREDICTORS WITH MULTIPLE POSSIBLE TYPES
+## Missing variable analysis
+all_missing &lt;- cols_missing_blank(the_data)
+row.names(all_missing) &lt;- NULL
+# Split out the factors and numerics/integers
+factors_missing &lt;- all_missing[as.character(all_missing$Column) %in% current_factors, , drop = FALSE]
+numbers_missing &lt;- all_missing[as.character(all_missing$Column) %in% current_numbers, , drop = FALSE]
+## Possible unique key fields
+# Deal with columns that came in as factors, but were coverted to numbers
+new_classes &lt;- sapply(the_data, class)
+new_numerics &lt;- names(new_classes)[new_classes == "numeric"]
+numbers_from_factors_are_integer &lt;- cols_numeric_is_integer(the_data, new_numerics)
+numbers_from_factors_are_integer &lt;- numbers_from_factors_are_integer[!is.na(numbers_from_factors_are_integer)]
+possible_unique_key_cols &lt;- unique(c(current_factors, current_integers, numbers_from_factors_are_integer))
+possible_unique_keys &lt;- sapply(the_data[, possible_unique_key_cols], function(x) length(unique(x)))
+unique_keys &lt;- names(possible_unique_keys)[possible_unique_keys == nrow(the_data)]
+## Reporting unique keys
+if (length(unique_keys) &gt; 0) {
+  unique_keys_list &lt;- formattedTextList(unique_keys)
+  if (length(unique_keys) == 1) {
+    unique_keys_text &lt;- paste("The column", unique_keys_list, "is potentially a unique key ID, and should not be used as a predictor column if this is the case.")
+  } else {
+    unique_keys_text &lt;- paste("The columns:", unique_keys_list, "are potentially unique key IDs, and the ones that are should not be used as predictor columns.")
+  }
+  unique_df &lt;- data.frame(grp = "Unique keys", out = unique_keys_text)
+  grp_out &lt;- rbind(grp_out, unique_df)
+}
+
+### CATEGORICAL PREDICTORS
+if (length(current_factors) &gt; 0) {
+  ## Analysis
+  # Sparse levels
+  sparse_levels &lt;- cols_num_sparse_levels(the_data, current_factors)
+  # The number of levels
+  num_levels &lt;- sapply(the_data[, current_factors, drop = FALSE], function(x) length(levels(x)))
+  # Level balance: normalized Herfindahl-Hirschman index
+  balance &lt;- 1 - sapply(the_data[, current_factors, drop = FALSE], datadoctor:::get_HHI)/10000
+
+  ## Reporting
+  # Combine all categorical variable specific metrics into a single data frame
+  sparse_levels$num_levels &lt;- num_levels
+  sparse_levels$balance &lt;- balance
+  # Add in the missing data analysis for the categoricals
+  factor_metrics &lt;- cbind(factors_missing, sparse_levels[, -1])
+  fitness &lt;- cols_factor_fitness(factor_metrics)
+  factor_metrics &lt;- cbind(factor_metrics, data.frame(Fitness = fitness))
+  factor_metrics &lt;- factor_metrics[order(factor_metrics$Fitness),]
+  factor_metrics_string &lt;- paste(factor_metrics$Column, factor_metrics$Number_Missing_Blank, factor_metrics$Percent_Missing_Blank, factor_metrics$five, factor_metrics$ten, factor_metrics$twenty, factor_metrics$num_levels, round(factor_metrics$balance, 4),factor_metrics$Fitness, sep = "|")
+  grp_out &lt;- rbind(grp_out, data.frame(grp = rep("Factor metrics", nrow(factor_metrics)), out = factor_metrics_string))
+}
+
+### CONTINUOUS PREDICTORS
+if (length(current_numbers) &gt; 0) {
+  ## Analysis
+  # Outliers
+  num_outliers &lt;- cols_num_outliers(the_data, current_numbers, "3sigma")
+  pct_outliers &lt;- round((100*num_outliers)/sapply(the_data[, current_numbers, drop = FALSE], function(x) length(x[!is.na(x)])), 2)
+  # Distribution shape
+  skew &lt;- round(sapply(the_data[, current_numbers, drop = FALSE], function(x) skewness(x[!is.na(x)])), 4)
+  kurt &lt;- round(sapply(the_data[, current_numbers, drop = FALSE], function(x) kurtosis(x[!is.na(x)])), 4)
+  number_metrics &lt;- cbind(numbers_missing, data.frame(Num_Outliers = num_outliers, Pct_Outliers = pct_outliers, Skewness = skew, Kurtosis = kurt))
+  continuous_fitness &lt;- cols_continuous_fitness(number_metrics)
+  number_metrics$Fitness &lt;- continuous_fitness
+
+  ## Reporting
+  number_metrics &lt;- number_metrics[order(number_metrics$Fitness),]
+  continuous_metrics_string &lt;- paste(number_metrics$Column, number_metrics$Number_Missing_Blank, number_metrics$Percent_Missing_Blank, number_metrics$Num_Outliers, number_metrics$Pct_Outliers, number_metrics$Skewness, number_metrics$Kurtosis, number_metrics$Fitness, sep = "|")
+  grp_out &lt;- rbind(grp_out, data.frame(grp = rep("Numeric metrics", length(continuous_metrics_string)), out = continuous_metrics_string))
+}
+
+### VARIABLE IMPORTANTANCE WEIGHTS
+## Analysis
+# Remove categorical unique keys
+unique_key_factors &lt;- current_factors[current_factors %in% unique_keys]
+if (length(unique_key_factors) &gt; 0) {
+  the_data &lt;- the_data[, !(names(the_data) %in% unique_key_factors)]
+}
+# Missing value imputation
+the_data &lt;- cols_imputation(the_data)
+# Put the target and the predictors back together
+#the_data &lt;- cbind(the_target, the_data)
+# Create the formula for the analysis
+the_formula &lt;- eval(parse(text = paste(names(the_data)[1], "~", paste(names(the_data)[-1], collapse = " + "))))
+# Perform the importance weight analysis
+importance_weights &lt;- if (class(the_target[[1]]) == "factor") {
+                        chiSquaredImportance(the_formula, the_data)
+                      } else {
+                        bsplineImportance(the_formula, the_data)
+                      }
+believability &lt;- rep(1, nrow(importance_weights))
+if (any(importance_weights$Importance &gt; 0.5)) {
+  believability[importance_weights$Importance &gt; 0.5] &lt;- 1 - 2*(importance_weights$Importance[importance_weights$Importance &gt; 0.5] - 0.5)
+}
+importance_weights$Believability &lt;- believability
+if (length(current_factors) &gt; 0) {
+  factor_fitness_df &lt;- factor_metrics[, c("Column", "Fitness")]
+}
+if (length(current_numbers) &gt; 0) {
+  number_fitness_df &lt;- number_metrics[, c("Column", "Fitness")]
+}
+if (length(current_factors) &gt; 0 &amp;&amp; length(current_numbers) &gt; 0) {
+  fitness_df &lt;- rbind(factor_fitness_df, number_fitness_df)
+}
+if (length(current_factors) &gt; 0 &amp;&amp; length(current_numbers) == 0) {
+  fitness_df &lt;- factor_fitness_df
+}
+if (length(current_factors) == 0 &amp;&amp; length(current_numbers) &gt; 0) {
+  fitness_df &lt;- number_fitness_df
+}
+believe_df &lt;- importance_weights[, c(1, 4)]
+names(believe_df) &lt;- c("Column", "Believability")
+summary_df &lt;- merge(fitness_df, believe_df, by = "Column")
+
+## Reporting
+# Convert the linearity measure to a character field and get rid of the NAs
+linearity_metric &lt;- as.character(round(importance_weights$Linearity, 4))
+linearity_metric[is.na(linearity_metric)] &lt;- " "
+importance_metrics &lt;- paste(importance_weights$Variable,
+ round(importance_weights$Importance, 4), linearity_metric, sep = "|")
+grp_out &lt;- rbind(grp_out, data.frame(grp = rep("Importance weights", length(importance_metrics)), out = importance_metrics))
+summary_string &lt;- paste(summary_df$Column, summary_df$Fitness, round(summary_df$Believability, 4), sep = "|")
+grp_out &lt;- rbind(grp_out, data.frame(grp = rep("Summary", length(summary_string)), out = summary_string))
+### WRITE OUT THE grp_out TABLE
+write.Alteryx2(grp_out)
+
+### INTERACTIVE DASHBOARDS 
+</RScript>
+          <UseFullUpdate value="False"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output1">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxRPluginEngine.dll" EngineDllEntryPoint="AlteryxR"/>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="234"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Target text</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Target text"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="354"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Single value predictor</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Single value predictor"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="534"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Type all factors</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Type all factors"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Type table</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Type table"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out" selected="True"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="858" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>out</Field>
+          <NumFields value="3"/>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>out</RootName>
+          <Delimeters value="|"/>
+          <Flags value="0"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns"/>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="978" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False"/>
+          <Width>100%</Width>
+          <ShowHeader value="True"/>
+          <ShowBarGraph value="False"/>
+          <TableFields orderChanged="False">
+            <Field name="out1" selected="True" Alignment="Left" Alias="Column"/>
+            <Field name="out2" selected="True" Alignment="Center" Width="" Alias="Continuous Likely to be Categorical"/>
+            <Field name="out3" selected="True" Alignment="Center" Alias="Categorical Likely to be Continuous" Width=""/>
+            <Field name="out" selected="False"/>
+            <Field name="*Unknown" selected="False"/>
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="--Verdana" Size="10" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1"/>
+            <Style Name="Header" Font="--Verdana" Size="11" TextColor="#000000" BackColor="#dbdbdb"/>
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)"/>
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000"/>
+            <Style Name="BarGraph" Width="100" Height="15" AutoScale="true" Min="0" Max="100" BaseValue="0" LabelBars="true" ColorMode="Single" TextColor="#b0c4de" BarPalette="#b30023,#00488c,#1e6c0b,#d84000,#f0b400,#332600,#5400a8,#434c43" BarFormula="&quot;Green&quot;" OutlineBars="true" OutlineColor="#000000"/>
+          </TableStyles>
+          <StyleRules/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin"/>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="762" y="234"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\b\f0\fs29 Target Column Assessment\par
+\b0\fs23\par
+[out:A]\par
+\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Target Column Assessment
+
+[out...</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="882" y="234"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="grp" selected="False"/>
+            <SelectField field="out" selected="False"/>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="930" y="282"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\b\f0\fs29 Predictor Column Assessment\b0\fs24\par
+\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[Predictor Column Assessment
+]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="762" y="354"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24 Columns containing only a single value\b0\fs23\par
+\par
+[out:A]\par
+\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Columns containing only a sing...</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="906" y="378"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1218" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="930" y="522"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\b\f0\fs24 Column types\b0\par
+\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[Column types
+]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1074" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Above</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\qc\b\f0\fs23\par
+Predictor Columns Likely to be of a Different Type\b0\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+Predictor Columns Likely to b...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="762" y="546"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs23 [out:A]\f1\par
+\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[[out:A]
+]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="762" y="786"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs23\par
+[out:A]\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+[out:A]]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="786"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="834" y="546"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="522"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="282"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1458" y="354"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True"/>
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+            <Connection>#3</Connection>
+            <Connection>#4</Connection>
+            <Connection>#5</Connection>
+            <Connection>#6</Connection>
+            <Connection>#7</Connection>
+            <Connection>#8</Connection>
+            <Connection>#9</Connection>
+            <Connection>#10</Connection>
+            <Connection>#11</Connection>
+            <Connection>#12</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report: (Multiple Sources)" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion"/>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1146" y="642"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Below</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\f0\fs29\par
+\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="450"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Unique keys</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Unique keys"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="762" y="450"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <Output>Text</Output>
+          <HeaderMode value="False"/>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24 Columns containing potential unique keys\b0\f1\fs29\par
+\f0\fs23\par
+[out:A]\par
+\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Columns containing potential u...</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="Text" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="450"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Text" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Text:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="654" y="786"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Type text</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Type text"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Factor metrics</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Factor metrics"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out" selected="True"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="858" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>out</Field>
+          <NumFields value="9"/>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>out</RootName>
+          <Delimeters value="|"/>
+          <Flags value="0"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out4" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out5" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out6" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out7" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out8" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out9" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns"/>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="978" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False"/>
+          <Width>100%</Width>
+          <ShowHeader value="True"/>
+          <ShowBarGraph value="False"/>
+          <TableFields orderChanged="False">
+            <Field name="out1" selected="True" Alignment="Left" Alias="Column" Width=""/>
+            <Field name="out2" selected="True" Alignment="Right" Alias="Number Missing"/>
+            <Field name="out3" selected="True" Alignment="Right" Alias="Percentage Missing"/>
+            <Field name="out4" selected="True" Alignment="Right" Alias="Levels with Five or Fewer Records" Width=""/>
+            <Field name="out5" selected="True" Alignment="Right" Alias="Levels with 6 to 10 Records"/>
+            <Field name="out6" selected="True" Alignment="Right" Alias="Levels with 11 to 20 Records"/>
+            <Field name="out7" selected="True" Alignment="Right" Alias="Number of Levels"/>
+            <Field name="out8" selected="True" Alignment="Right" Alias="Level Balance"/>
+            <Field name="out9" selected="True" Alignment="Right" Alias="Fitness" Width=""/>
+            <Field name="out" selected="False"/>
+            <Field name="*Unknown" selected="False"/>
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="--Verdana" Size="10" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1"/>
+            <Style Name="Header" Font="--Verdana" Size="11" TextColor="#000000" BackColor="#dbdbdb"/>
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)"/>
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000"/>
+            <Style Name="BarGraph" Width="100" Height="15" AutoScale="true" Min="0" Max="100" BaseValue="0" LabelBars="true" ColorMode="Single" TextColor="#b0c4de" BarPalette="#b30023,#00488c,#1e6c0b,#d84000,#f0b400,#332600,#5400a8,#434c43" BarFormula="&quot;Green&quot;" OutlineBars="true" OutlineColor="#000000"/>
+          </TableStyles>
+          <StyleRules>
+            <Rule Name="4bae60b3-9288-48bf-a24d-feb0047bcd22">
+              <RowRule value="True"/>
+              <HighPrecedence value="False"/>
+              <Field/>
+              <Test>Simple</Test>
+              <ApplyTo>Data</ApplyTo>
+              <SimpleVar>out9</SimpleVar>
+              <SimpleOp>==</SimpleOp>
+              <SimpleConst>1</SimpleConst>
+              <Formula>1</Formula>
+              <Style/>
+              <PrettyName>Row Rule 1</PrettyName>
+            </Rule>
+            <Rule Name="719eb2df-5d71-44dc-9942-b1fee95267f7">
+              <RowRule value="False"/>
+              <HighPrecedence value="False"/>
+              <Field>out1</Field>
+              <Test>Formula</Test>
+              <ApplyTo>Data</ApplyTo>
+              <SimpleVar/>
+              <SimpleOp>==</SimpleOp>
+              <SimpleConst>1</SimpleConst>
+              <Formula>1</Formula>
+              <Style/>
+              <PrettyName>out1 Rule 1</PrettyName>
+            </Rule>
+          </StyleRules>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin"/>
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1074" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Above</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24\par
+\par
+Categorical predictor column analysis\par
+\par
+\pard\qc Categorical Predictors Fitness Metrics\b0\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Categorical predictor column...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1170" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Below</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\f0\fs23\par
+\par
+\i Column desriptions and recommended actions\par
+\i0\par
+\ul Number Missing\ulnone : The number of records with missing values for the predictor column. "Percentage Missing" is actually a more important metric for missing values the "Number Missing". However, it is important to note that a predictor column with a missing value will have that row removed in the creation of some models, but not others. As a result, if missing values are not addressed, it is possible that two models of different types created with the data will be based on slightly different set of records, with the difference caused by one modeling dropping records, but the other not.\par
+\par
+\ul Percentage Missing\ulnone : The percentage of records with missing values for the predictor column. If there are a small number of columns with missing values, and all the columns with missing values have a small percentage of missing values (1% or fewer), then filtering these records out of the data (using a Filter tool) is an acceptable strategy. Another approach, which can always be used if some of the predictor columns have missing values, and should always be used in cases where there are predictor columns with more that 1% missing values, is to replace the missing values with a new value (for example, a value of "Missing") using one of the Imputation, Multi-Field Formula, and Formula tools. For the Importance Weight portion of this analysis, missing values will be imputed in this way.\par
+\par
+\ul Levels with Five or Fewer Records\ulnone : The number of levels (categories) in a categorical predictor column that has five or fewer records. A level that falls into this will likely an provide unreliable indicators of how this category alters response behavior. Moreover, levels with this small a number may well complicate model estimation for methods that make use of cross validation as part of the model creation process. Strongly consider combining levels together on logical grounds. For example, if a country code is used, and several countries have a small number of records associated with them, then consider combining them together (e.g., creating a "Central America" category by combining together the country codes for El Salvador, Guatemala, Panama, and Honduras), or adding one category to another (e.g., recoding records from Andorra as being from Spain, implicitly combining these two levels together into a new category).\par
+\par
+\ul Levels with 6 to 10 Records\ulnone : The number of levels (categories) in a categorical predictor column that has between six to ten records. A level that falls into this can often provide unreliable indicators of how this category alters response behavior. Moreover, levels with this small a number can complicate model estimation for methods that make use of cross validation as part of the model creation process. Strongly consider combining levels together on logical grounds using the methods discussed in the description of "Levels with Five or Fewer Records."\par
+\par
+\ul Levels with 11 to 20 Records\ulnone : The number of levels (categories) in a categorical predictor column that has between eleven and twenty records. A level that falls into this may provide unreliable indicators of how this category alters response behavior. Consider combining levels together on logical grounds using the methods discussed in the description of "Levels with Five or Fewer Records."\par
+\par
+\ul Number of Levels\ulnone : The total unique number of levels (categories) for a categorical column. A number of modeling methods have a limit on the numbers of levels in a categorical column that can be addressed by the algorithm. There are two possible ways to address this issue. The first is to combine levels together on logical grounds using the methods discussed in the description of "Levels with Five or Fewer Records." The second is to convert the levels in the original column into a set of binary 0-1 indicator columns. This approach addresses the limitation of some of the algorithms, but at the expense of creating a large number of new variables (if a variable has 100 levels, then 100 new variables will be created). Moreover, the way tree based algorithms (the Decision Tree, Forest Model, and Boosted Model in Alteryx) handle the set of 0-1 indicator columns is different from how the original categorical column is handled. The selection of which of the two approaches to use is context specific. If there are good logical grounds for combining levels together, then use this approach. If this is not the case, and all the levels contain a reasonable number of records (ten or more) then using the zero-one indicator approach is appropriate.\par
+\par
+\ul Level Balance\ulnone : This metric ranges between zero and one, and captures the extent to which records are concentrated into one or only a few categories. If all the records are in a single category, then Level Balance is zero, while if all records are in their own level, the measure is one. The measure is based on the Herfindahl-Hirschman index from economics, and also known as the Simpson index in ecology. Small values on this measure (those below about 0.1) suggest that the levels of a categorical column are fairly unbalanced. The extent to which balance matters for a predictor column depends on the context, typically it is not a major concern, while it can be extremely important for a target variable in terms of selection of an appropriate modeling method. The index is included since some users may find relevant for the problem they are addressing.\par
+\par
+\ul Fitness\ulnone : The metric ranges between zero and one. A low value indicates that a column needs to be further cleansed before it is ready to be used in creating a predictive model, while values near one indicate that the column is ready to use for this purpose. The metric uses judgment based weights that take into account missing values, sparse record counts for category levels, and the total number of category levels for a column.\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Column desriptions and recom...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1290" y="978"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Numeric metrics</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Numeric metrics"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out" selected="True"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="882" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>out</Field>
+          <NumFields value="8"/>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>out</RootName>
+          <Delimeters value="|"/>
+          <Flags value="0"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out4" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out5" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out6" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out7" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out8" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns"/>
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="1098" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False"/>
+          <Width>100%</Width>
+          <ShowHeader value="True"/>
+          <ShowBarGraph value="False"/>
+          <TableFields orderChanged="False">
+            <Field name="out1" selected="True" Alignment="Left" Alias="Column"/>
+            <Field name="out2" selected="True" Alignment="Left" Alias="Number Missing"/>
+            <Field name="out3" selected="True" Alignment="Left" Alias="Percentage Missing" Places="2" Width=""/>
+            <Field name="out4" selected="True" Alignment="Left" Alias="Number of Outliers" Width="" Places="0"/>
+            <Field name="out5" selected="True" Alignment="Left" Alias="Percentage Outliers" Places="2"/>
+            <Field name="out6" selected="True" Alignment="Left" Alias="Skewness" Places="2"/>
+            <Field name="out7" selected="True" Alignment="Left" Alias="Kurtosis" Places="2" Width=""/>
+            <Field name="out8" selected="True" Alignment="Left" Alias="Fitness" Places="1"/>
+            <Field name="out" selected="False"/>
+            <Field name="*Unknown" selected="False"/>
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="--Verdana" Size="10" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1"/>
+            <Style Name="Header" Font="--Verdana" Size="11" TextColor="#000000" BackColor="#dbdbdb"/>
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)"/>
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000"/>
+          </TableStyles>
+          <StyleRules/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin"/>
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="978" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out1" selected="True" size="256"/>
+            <SelectField field="out2" selected="True" type="Int32" size="4"/>
+            <SelectField field="out3" selected="True" type="Double" size="8"/>
+            <SelectField field="out4" selected="True" type="Int32" size="4"/>
+            <SelectField field="out5" selected="True" type="Double" size="8"/>
+            <SelectField field="out6" selected="True" type="Double" size="8"/>
+            <SelectField field="out7" selected="True" type="Double" size="8"/>
+            <SelectField field="out8" selected="True" type="Double" size="8"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="256" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" source="TextToColumns: Parsed from out" type="Int32"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" source="TextToColumns: Parsed from out" type="Double"/>
+            <Field description="TextToColumns: Parsed from out" name="out4" source="TextToColumns: Parsed from out" type="Int32"/>
+            <Field description="TextToColumns: Parsed from out" name="out5" source="TextToColumns: Parsed from out" type="Double"/>
+            <Field description="TextToColumns: Parsed from out" name="out6" source="TextToColumns: Parsed from out" type="Double"/>
+            <Field description="TextToColumns: Parsed from out" name="out7" source="TextToColumns: Parsed from out" type="Double"/>
+            <Field description="TextToColumns: Parsed from out" name="out8" source="TextToColumns: Parsed from out" type="Double"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1194" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Above</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24\par
+\par
+Continuous predictor column analysis\par
+\par
+\pard\qc Continuous Predictors Fitness Metrics\b0\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Continuous predictor column ...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1290" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Below</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}}
+\viewkind4\uc1\pard\f0\fs23\par
+\par
+\i Column desriptions and recommended actions\par
+\i0\par
+\ul Number Missing\ulnone : The number of records with missing values for the predictor column. "Percentage Missing" is actually a more important metric for missing values then the "Number Missing". However, it is important to note that a predictor column with a missing value will have that row removed in the creation of some models, but not others. As a result, if missing values are not addressed, it is possible that two models of different types created with the data will be based on slightly different set of records, with the difference caused by one modeling dropping records, but the other not.\par
+\par
+\ul Percentage Missing\ulnone : The percentage of records with missing values for the predictor column. If there are a small number of columns with missing values, and all the columns with missing values have a small percentage of missing values (1% or fewer), then filtering these records out of the data (using a Filter tool) is an acceptable strategy. Another approach, which can always be used if some of the predictor columns have missing values, and should always be used in cases where there are predictor columns with more that 1% missing values, is to replace the missing values with a new value (for example, a value of 0) and adding an indicator flag to indicate whether a value has been imputed via the Imputation tool. For the Importance Weight portion of this analysis, missing values will be imputed in this way.\par
+\par
+\ul Number of Outliers\ulnone :\par
+\par
+\ul Percentage of Outliers\ulnone :\par
+\par
+\ul Skewness\ulnone :\par
+\par
+\ul Kurtosis\ulnone :\par
+\par
+\ul Fitness\ulnone : The metric ranges between zero and one. A low value indicates that a column needs to be further cleansed before it is ready to be used in creating a predictive model, while values near one indicate that the column is ready to use for this purpose. The metric uses judgment based weights that take into account missing values and the skewness of the distribution of the variable.\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Column desriptions and recom...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1362" y="1170"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Importance weights</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Importance weights"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="grp" selected="False"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="882" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>out</Field>
+          <NumFields value="3"/>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>out</RootName>
+          <Delimeters value="|"/>
+          <Flags value="0"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns"/>
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="978" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out1" selected="True"/>
+            <SelectField field="out2" selected="True"/>
+            <SelectField field="out3" selected="True"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="1074" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False"/>
+          <Width>100%</Width>
+          <ShowHeader value="True"/>
+          <ShowBarGraph value="False"/>
+          <TableFields orderChanged="False">
+            <Field name="out1" selected="True" Alignment="Left" Alias="Column"/>
+            <Field name="out2" selected="True" Alignment="Right" Alias="Importance"/>
+            <Field name="out3" selected="True" Alignment="Right" Alias="Linearity" Width=""/>
+            <Field name="*Unknown" selected="False"/>
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="--Verdana" Size="10" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1"/>
+            <Style Name="Header" Font="--Verdana" Size="11" TextColor="#000000" BackColor="#dbdbdb"/>
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)"/>
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000"/>
+          </TableStyles>
+          <StyleRules/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin"/>
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1194" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Above</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24\par
+\par
+Predictor column importance analysis\par
+\par
+\pard\qc Predictor Importance and Linearity Metrics\b0\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Predictor column importance ...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1338" y="1314"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1542" y="354"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output61</Name>
+          <Abbrev/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput"/>
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="282"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True"/>
+          <Name>Input62</Name>
+          <Abbrev/>
+          <ShowFieldMap value="False"/>
+          <Optional value="False"/>
+          <FileInput>
+            <Configuration>
+              <Passwords/>
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\dputler\Work\Example_Data\New_Donor.yxdb</File>
+              <FormatSpecificOptions/>
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Input Data (59)</Name>
+          <AnnotationText>New_Donor.yxdb</AnnotationText>
+          <DefaultAnnotationText>New_Donor.yxdb</DefaultAnnotationText>
+          <Left value="True"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Donate" size="64" source="Formula: [Donate2]" type="String"/>
+            <Field name="Degrees" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="First_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Last_Years" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Undergraduate" size="64" source="Formula: IF [Undergradu] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="First_School" size="64" source="Formula: IF [First_School] == &quot;HK&quot; THEN &quot;PE&quot; ELSE [First_School] ENDIF" type="String"/>
+            <Field name="Last_School" size="64" source="Formula: IF [Last_School] == &quot;CO&quot; THEN &quot;BU&quot; ELSE [Last_School] ENDIF" type="String"/>
+            <Field name="Faculty_Staff" size="64" source="Formula: IF [Faculty_St] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intercollegiate" size="64" source="Formula: IF [Intercolle] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Intramural" size="64" source="Formula: [Intramural2]" type="String"/>
+            <Field name="Other_Activities" size="64" source="Formula: IF [Other_Acti] == 1 THEN &quot;Yes&quot; ELSE &quot;No&quot; ENDIF" type="String"/>
+            <Field name="Gender" size="64" source="Formula: [Gender2]" type="String"/>
+            <Field name="Child" size="64" source="Formula: [Child2]" type="String"/>
+            <Field name="Parent" size="64" source="Formula: [Parent2]" type="String"/>
+            <Field name="Spouse" size="64" source="Formula: [Spouse2]" type="String"/>
+            <Field name="Telephone" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Mail" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Personal" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+            <Field name="Combined" source="File: C:\Users\dputler\Dropbox\R_Commander\Windows_Packages\UBC.dbf" type="Int32"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput"/>
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
+        <Position x="174" y="54" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="174" y="138" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.ListBox">
+        <Position x="390" y="54" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="390" y="138" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="654" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>grp</Field>
+            <Operator>=</Operator>
+            <Operands>
+              <Operand>Summary</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>[grp] = "Summary"</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter"/>
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="grp" selected="False"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="882" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>out</Field>
+          <NumFields value="3"/>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>out</RootName>
+          <Delimeters value="|"/>
+          <Flags value="0"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out1" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out2" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="out3" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns"/>
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="978" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="out1" selected="True" rename="Column"/>
+            <SelectField field="out2" selected="True" rename="Fitness"/>
+            <SelectField field="out3" selected="True" rename="Believability"/>
+            <SelectField field="*Unknown" selected="False"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from out" name="Column" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="Fitness" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="Believability" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="1170" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False"/>
+          <Width>100%</Width>
+          <ShowHeader value="True"/>
+          <ShowBarGraph value="False"/>
+          <TableFields orderChanged="False">
+            <Field name="Column" selected="True" Alignment="Left"/>
+            <Field name="Fitness" selected="True" Alignment="Left"/>
+            <Field name="Believability" selected="True" Alignment="Left"/>
+            <Field name="out3" selected="False"/>
+            <Field name="out1" selected="False"/>
+            <Field name="out2" selected="False"/>
+            <Field name="*Unknown" selected="False"/>
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="--Verdana" Size="10" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1"/>
+            <Style Name="Header" Font="--Verdana" Size="11" TextColor="#000000" BackColor="#dbdbdb"/>
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)"/>
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000"/>
+          </TableStyles>
+          <StyleRules/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Fitness" order="Ascending"/>
+            <Field field="Believability" order="Ascending"/>
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin"/>
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
+        <Position x="1266" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Images/>
+          <HeaderMode value="True"/>
+          <HeaderField>Table</HeaderField>
+          <Position>Above</Position>
+          <RawMode value="False"/>
+          <ValidatePCXML value="True"/>
+          <Message/>
+          <RichTextMode value="True"/>
+          <RichTextString><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Verdana;}{\f1\fnil\fcharset0 Microsoft Sans Serif;}}
+\viewkind4\uc1\pard\b\f0\fs24\par
+\par
+Predictor column overall summary\par
+\par
+\pard\qc Predictor Fitness and Believability\b0\f1\fs29\par
+}
+]]></RichTextString>
+          <Styles>
+            <Style Name="TextStyle"/>
+          </Styles>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText><![CDATA[
+
+Predictor column overall sum...]]></DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Fitness" order="Ascending"/>
+            <Field field="Believability" order="Ascending"/>
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin"/>
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1362" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False"/>
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="Report"/>
+            <SelectField field="*Unknown" selected="True"/>
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report:Table:Basic:" type="V_String"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect"/>
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1074" y="1458"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Fitness" order="Ascending"/>
+            <Field field="Believability" order="Ascending"/>
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Fitness - Ascending
+Believability - Ascending</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from out" name="Column" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="Fitness" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+            <Field description="TextToColumns: Parsed from out" name="Believability" size="1073741823" source="TextToColumns: Parsed from out" type="V_WString"/>
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Fitness" order="Ascending"/>
+            <Field field="Believability" order="Ascending"/>
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort"/>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output"/>
+      <Destination ToolID="3" Connection="Left"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output"/>
+      <Destination ToolID="3" Connection="Right"/>
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="3" Connection="Join"/>
+      <Destination ToolID="4" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output1"/>
+      <Destination ToolID="5" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="False"/>
+      <Destination ToolID="6" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True"/>
+      <Destination ToolID="12" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True"/>
+      <Destination ToolID="15" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="False"/>
+      <Destination ToolID="31" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="False"/>
+      <Destination ToolID="8" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True"/>
+      <Destination ToolID="20" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True"/>
+      <Destination ToolID="9" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="False"/>
+      <Destination ToolID="34" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output"/>
+      <Destination ToolID="10" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output"/>
+      <Destination ToolID="11" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output"/>
+      <Destination ToolID="19" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output"/>
+      <Destination ToolID="13" Connection="Input"/>
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="13" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="16" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="17" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="22" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="23" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="24" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="25" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="33" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="41" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#10">
+      <Origin ToolID="51" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#11">
+      <Origin ToolID="58" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection name="#12">
+      <Origin ToolID="73" Connection="Output"/>
+      <Destination ToolID="26" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output"/>
+      <Destination ToolID="25" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output"/>
+      <Destination ToolID="16" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output"/>
+      <Destination ToolID="24" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output"/>
+      <Destination ToolID="30" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output"/>
+      <Destination ToolID="23" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output"/>
+      <Destination ToolID="22" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output"/>
+      <Destination ToolID="61" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output"/>
+      <Destination ToolID="17" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="False"/>
+      <Destination ToolID="7" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="True"/>
+      <Destination ToolID="32" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output"/>
+      <Destination ToolID="33" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="True"/>
+      <Destination ToolID="21" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="False"/>
+      <Destination ToolID="35" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True"/>
+      <Destination ToolID="36" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="False"/>
+      <Destination ToolID="42" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output"/>
+      <Destination ToolID="37" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output"/>
+      <Destination ToolID="38" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output"/>
+      <Destination ToolID="39" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output"/>
+      <Destination ToolID="40" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output"/>
+      <Destination ToolID="41" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="True"/>
+      <Destination ToolID="43" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="False"/>
+      <Destination ToolID="52" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output"/>
+      <Destination ToolID="44" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output"/>
+      <Destination ToolID="47" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output"/>
+      <Destination ToolID="49" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output"/>
+      <Destination ToolID="45" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output"/>
+      <Destination ToolID="50" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output"/>
+      <Destination ToolID="51" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="True"/>
+      <Destination ToolID="53" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="False"/>
+      <Destination ToolID="67" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output"/>
+      <Destination ToolID="54" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output"/>
+      <Destination ToolID="55" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output"/>
+      <Destination ToolID="56" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output"/>
+      <Destination ToolID="57" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output"/>
+      <Destination ToolID="58" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output"/>
+      <Destination ToolID="1" Connection="Input"/>
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="64" Connection="Action"/>
+      <Destination ToolID="1" Connection="Action"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output"/>
+      <Destination ToolID="2" Connection="Input"/>
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="66" Connection="Action"/>
+      <Destination ToolID="2" Connection="Action"/>
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="62" Connection="Question"/>
+      <Destination ToolID="63" Connection="Question Input"/>
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="62" Connection="Question"/>
+      <Destination ToolID="65" Connection="Question Input"/>
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="63" Connection="Question"/>
+      <Destination ToolID="64" Connection="Question"/>
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="65" Connection="Question"/>
+      <Destination ToolID="66" Connection="Question"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="True"/>
+      <Destination ToolID="68" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output"/>
+      <Destination ToolID="69" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output"/>
+      <Destination ToolID="70" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output"/>
+      <Destination ToolID="74" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output"/>
+      <Destination ToolID="72" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output"/>
+      <Destination ToolID="73" Connection="Input"/>
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output"/>
+      <Destination ToolID="71" Connection="Input"/>
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True"/>
+    <GlobalRecordLimit value="0"/>
+    <TempFiles default="True"/>
+    <Annotation on="True" includeToolName="False"/>
+    <ConvErrorLimit value="10"/>
+    <ConvErrorLimit_Stop value="False"/>
+    <CancelOnError value="False"/>
+    <DisableBrowse value="False"/>
+    <EnablePerformanceProfiling value="False"/>
+    <DisableAllOutput value="False"/>
+    <ShowAllMacroMessages value="False"/>
+    <ShowConnectionStatusIsOn value="True"/>
+    <ShowConnectionStatusOnlyWhenRunning value="True"/>
+    <ZoomLevel value="0"/>
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (61)</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (62)</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Drop Down (63)</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>List Box (65)</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True"/>
+      <Name>Predictive Adviser</Name>
+      <Description/>
+      <RootToolName/>
+      <ToolVersion/>
+      <ToolInDb value="False"/>
+      <CategoryName/>
+      <SearchTags/>
+      <Author/>
+      <Company/>
+      <Copyright/>
+      <DescriptionLink actual="" displayed=""/>
+      <Example>
+        <Description/>
+        <File/>
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True"/>
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description/>
+              <ToolId value="64"/>
+              <Mode>Simple</Mode>
+              <Variable/>
+              <Replace value="False"/>
+              <Destination>1/SelectFields/SelectField[@field='Donate']/@field</Destination>
+            </Action>
+            <Action>
+              <Type>UpdateSelect</Type>
+              <Description/>
+              <ToolId value="66"/>
+              <Variable/>
+              <SelectTool value="-1"/>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (60)</Name>
+          <ToolId value="60"/>
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (61)</Description>
+              <Name>Macro Output (61)</Name>
+              <ToolId value="61"/>
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (62)</Description>
+              <Name>Macro Input (62)</Name>
+              <ToolId value="62"/>
+            </Question>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>Select the column you would like to predict</Description>
+              <Name>Drop Down (63)</Name>
+              <ToolId value="63"/>
+              <Multiple value="False"/>
+              <Default/>
+              <Mode>MacroField</Mode>
+              <MacroField_InputTool value="0"/>
+              <Field_IncludeNone value="False"/>
+              <MacroField_FilterTypes>Byte,Int16,Int32,Int64,FixedDecimal,Float,Double,String,WString,V_String,V_WString</MacroField_FilterTypes>
+            </Question>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>Select the columns you believe influence the value of the target column</Description>
+              <Name>List Box (65)</Name>
+              <ToolId value="65"/>
+              <Multiple value="True"/>
+              <Multiple_Custom value="False"/>
+              <Multiple_Default value="False"/>
+              <Mode>MacroField</Mode>
+              <MacroField_InputTool value="0"/>
+              <Field_IncludeNone value="False"/>
+              <MacroField_FilterTypes>Byte,Int16,Int32,Int64,FixedDecimal,Float,Double,String,WString,V_String,V_WString</MacroField_FilterTypes>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False"/>
+      <MacroDynamicOutputFields value="False"/>
+      <MacroImage>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</MacroImage>
+      <MacroInputs/>
+      <MacroOutputs/>
+      <Wiz_CustomHelp value="False"/>
+      <Wiz_CustomGraphic value="False"/>
+      <Wiz_ShowOutput value="True"/>
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="61" Selected="True"/>
+        <Tool ToolId="62" Selected="True"/>
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage/>
+      <Wiz_NoOutputFilesMessage/>
+      <Wiz_ChainRunWizard/>
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

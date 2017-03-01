@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="11.0">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">_externals\1\CCS_500.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CCS_500.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MonthGive" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Region" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="YearsGive" source="R-DATA:" type="Double" />
+            <Field name="AveDonAmt" source="R-DATA:" type="Double" />
+            <Field name="LastDonAmt" source="R-DATA:" type="Double" />
+            <Field name="DonPerYear" source="R-DATA:" type="Double" />
+            <Field name="NewDonor" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Age20t29" source="R-DATA:" type="Double" />
+            <Field name="Age20t39" source="R-DATA:" type="Double" />
+            <Field name="Age60pls" source="R-DATA:" type="Double" />
+            <Field name="Age70pls" source="R-DATA:" type="Double" />
+            <Field name="Age80pls" source="R-DATA:" type="Double" />
+            <Field name="AdultAge" source="R-DATA:" type="Double" />
+            <Field name="SomeUnivP" source="R-DATA:" type="Double" />
+            <Field name="FinUnivP" source="R-DATA:" type="Double" />
+            <Field name="hh1t2mem" source="R-DATA:" type="Double" />
+            <Field name="hh1mem" source="R-DATA:" type="Double" />
+            <Field name="AveIncEA" source="R-DATA:" type="Double" />
+            <Field name="DwelValEA" source="R-DATA:" type="Double" />
+            <Field name="EngPrmLang" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings>
+        <Position x="162" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Drop Down (63)">MonthGive</Value>
+          <Value name="List Box (65)">MonthGive=False,Region=True,YearsGive=False,AveDonAmt=True,LastDonAmt=True,DonPerYear=True,NewDonor=False,Age20t29=False,Age20t39=False,Age60pls=False,Age70pls=False,Age80pls=False,AdultAge=False,SomeUnivP=False,FinUnivP=False,hh1t2mem=False,hh1mem=False,AveIncEA=False,DwelValEA=False,EngPrmLang=False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output61">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Adviser.yxmc" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="258" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dputler\AppData\Local\Temp\Engine_3944_639aa038c13a409eab8ac7ea843daa29_\Engine_8692_eb51a80493ef4866a2b3928f2283d2fd_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">_externals\1\Eggs.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Eggs.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Week" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Int32" />
+            <Field name="Month" size="9" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="String" />
+            <Field name="First_Week" size="10" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="String" />
+            <Field name="Easter" size="11" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="String" />
+            <Field name="Cases" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Int32" />
+            <Field name="Egg_Pr" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Double" />
+            <Field name="Beef_Pr" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Double" />
+            <Field name="Pork_Pr" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Double" />
+            <Field name="Chicken_Pr" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Double" />
+            <Field name="Cereal_Pr" source="File: C:\Users\dputler\Work\R_Macros\Predictive_Analytics\Eggs.dbf" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings>
+        <Position x="126" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Drop Down (63)">Cases</Value>
+          <Value name="List Box (65)">Week=True,Month=True,First_Week=True,Easter=True,Cases=False,Egg_Pr=True,Beef_Pr=True,Pork_Pr=False,Chicken_Pr=False,Cereal_Pr=False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output61">
+          <RecordInfo>
+            <Field name="Report" size="2147483647" source="Report: (Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Adviser.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="222" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dputler\AppData\Local\Temp\Engine_3944_639aa038c13a409eab8ac7ea843daa29_\Engine_8692_0546e38a3e5c408eabb7ac2171666607_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input62" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output61" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input62" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output61" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="True" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Predictive_Adviser_examples</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
