@@ -230,9 +230,12 @@ change_float_to_int <- function(df, float_cols) {
 #' in the column is less than or equal to threshold, the column names will be returned.
 #' @return Names of columns who are integer type but are potentially categorical.
 #' @export
-cols_int_is_categorical <- function(df, int_cols, threshold = 2) {
-  count <- sapply(df, function(x) length(unique(x)))
-  names(count[count <= threshold])
+cols_int_is_categorical <- function(df, int_cols = NULL, threshold = 2) {
+  if (is.null(int_cols)) {
+    int_cols <- colnames(df)
+  }
+  count <- sapply(df[int_cols], function(x) length(unique(x)))
+  int_cols[count <= threshold]
 }
 
 
