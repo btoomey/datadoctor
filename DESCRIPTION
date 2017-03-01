@@ -1,6 +1,6 @@
 Package: datadoctor
 Title: Data Doctor
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: person("Dan", "Putler", email = "dputler@alteryx.com", role = c("aut", "cre"))
 Description: Data Doctor.
 Depends:
