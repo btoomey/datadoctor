@@ -403,7 +403,7 @@ if (!all_are_factors) {
   if (length(integers_are_categoricals) &gt; 0) {
     the_data &lt;- change_int_to_factor(the_data, integers_are_categoricals)
     current_integers &lt;- current_integers[!(current_integers %in% integers_are_categoricals)]
-    current_factors &lt;- unique(c(orig_factors, integers_are_categoricals))
+    current_factors &lt;- c(orig_factors, integers_are_categoricals)
   }
   # Check to see if there are numeric codes disguised as integers and convert.
   # Possible ZIP codes

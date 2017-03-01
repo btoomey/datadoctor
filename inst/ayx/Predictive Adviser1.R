@@ -254,7 +254,7 @@ if (!all_are_factors) {
   if (length(integers_are_categoricals) > 0) {
     the_data <- change_int_to_factor(the_data, integers_are_categoricals)
     current_integers <- current_integers[!(current_integers %in% integers_are_categoricals)]
-    current_factors <- unique(c(orig_factors, integers_are_categoricals))
+    current_factors <- c(orig_factors, integers_are_categoricals)
   }
   # Check to see if there are numeric codes disguised as integers and convert.
   # Possible ZIP codes
