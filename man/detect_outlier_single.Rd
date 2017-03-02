@@ -5,7 +5,7 @@
 \title{Detect outliers for single variable}
 \usage{
 detect_outlier_single(s, strategy = "3sigma", IQR_coef = 1.5,
-  return_stats = TRUE)
+  return_records = TRUE)
 }
 \arguments{
 \item{s}{One column of a data.frame}
@@ -16,13 +16,13 @@ suggested value for this parameter is between 1.5 (default) to 3, with 1.5
 less conservative and returning all suspected outliers and 3 only returning
 values the algorithm is more certain to be outliers.}
 
+\item{stategy}{A string, which strategy to use to identify outlier.It can
+be 'quantile' or '3sigma (default)'.}
+
 \item{return_stats}{If TRUE, the function returns a list with information of
 if there are outliers, number of outlier, percentage of outlier in the
 column. If FALSE, the function returns the records themselves who are
 outliers.}
-
-\item{stategy}{A string, which strategy to use to identify outlier.It can
-be 'quantile' or '3sigma (default)'.}
 }
 \value{
 A boolean to indicate if there are outliers or records that are

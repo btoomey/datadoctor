@@ -5,7 +5,7 @@
 \title{Return column names, whose current data type is integer, but it is potentially
 categorical.}
 \usage{
-cols_int_is_categorical(df, int_cols, threshold = 2)
+cols_int_is_categorical(df, int_cols = NULL, threshold = 2)
 }
 \arguments{
 \item{df}{The data.frame}
