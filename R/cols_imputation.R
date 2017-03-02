@@ -1,3 +1,10 @@
+#' Impute missing values, with factors getting the value Missing, and numerics
+#' and integers getting zero (strictly positive valued columns) or a negative
+#' value that is less than the existing minimum value. An imputation flag is
+#' also created for numeric and integer columns.
+#'
+#' @param df The data.frame
+#' @return The modified data.frame.
 #' @export
 cols_imputation <- function(df) {
   for (i in names(df)) {

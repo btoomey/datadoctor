@@ -1,3 +1,9 @@
+#' Convert any blank values to missing (NA) values
+#'
+#' @param df The data.frame
+#' @param cols.to.use The vector of column names for which sparse levels are 
+#' reported
+#' @return A data.frame containing the sparse levels report.
 #' @export
 cols_num_sparse_levels <- function(df, cols.to.use) {
   # Address possible erroneous columns

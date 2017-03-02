@@ -1,3 +1,7 @@
+#' Calculate the fitness measure for factor columns.
+#'
+#' @param fm The data.frame of factor column fitness metrics
+#' @return A named vector of fitness measures that can range from zero to one.
 #' @export
 cols_factor_fitness <- function(fm) {
   # Penalty for missing values

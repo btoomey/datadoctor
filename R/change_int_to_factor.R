@@ -12,9 +12,14 @@ change_int_to_factor <- function(df, int.factor.cols) {
   return(df)
 }
 
-
+#' Change factor type columns to numeric.
+#'
+#' @param df The data.frame
+#' @param fact.cols A vector of the names of the integer columns to be
+#' converted to factors
+#' @return The modified data.frame.
 #' @export
-change_factor_to_number <- function (df, fact_cols) {
-  df[fact_cols] <- as.data.frame(apply(df[fact_cols], 2, strip_helper))
+change_factor_to_number <- function (df, fact.cols) {
+  df[fact.cols] <- as.data.frame(apply(df[fact.cols], 2, strip_helper))
   df
 }

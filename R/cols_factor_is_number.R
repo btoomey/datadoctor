@@ -1,3 +1,8 @@
+#' Strip off characters such as currency indicator and percentage signs that
+#' cause what is actually a numeric or integer column to be interpreted as a
+#' character or factor column.
+#'
+#' @param x a character vector which is typically a column in a data frame.
 strip_helper <- function (x) {
     xx <- trimws(as.character(x))
     no_na <- xx[nchar(xx) > 0 & !is.na(xx)]
@@ -50,8 +55,15 @@ cols_factor_is_number <- function(df, factor.cols) {
   test_numeric
 }
 
-change_factor_to_number <- function (df, fact_cols)
+#' Change factor type of columns to numeric type.
+#'
+#' @param df The data.frame
+#' @param factor.cols A vector of the names of the factor columns to be
+#' converted to numerics
+#' @return The modified data.frame.
+#' @export
+change_factor_to_number <- function (df, factor.cols)
 {
-    df[fact_cols] <- as.data.frame(apply(df[fact_cols], 2, strip_helper))
+    df[factor.cols] <- as.data.frame(apply(df[factor.cols], 2, strip_helper))
     df
 }

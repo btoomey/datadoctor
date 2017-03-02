@@ -1,3 +1,7 @@
+#' A helper function to construct interval labels
+#' 
+#' @param bdf a data frame containing information about the upper and lower
+#' bounds of the categories being created from a numeric or integer column
 intervalLabels <- function(bdf) {
   left_end <- c("[", rep("(", (nrow(bdf) - 1)))
   right_end <- c(rep("]", nrow(bdf)))

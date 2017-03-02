@@ -1,3 +1,7 @@
+#' Calculate the fitness measure for continuous columns.
+#'
+#' @param cm The data.frame of continuous column fitness metrics
+#' @return A named vector of fitness measures that can range from zero to one.
 #' @export
 cols_continuous_fitness <- function(cm) {
   # Penalty for missing values

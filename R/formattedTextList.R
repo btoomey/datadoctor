@@ -1,3 +1,6 @@
+#' An English language centric helper function that converts a vector into a
+#' comma seperated list of the values in the vector as a character string.
+#' @param x a vector of values to be converted into a text string list
 #' @export
 formattedTextList <- function(x) {
   if (class(x) == "factor") {
