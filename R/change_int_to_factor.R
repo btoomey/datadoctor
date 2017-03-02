@@ -11,3 +11,10 @@ change_int_to_factor <- function(df, int.factor.cols) {
   }
   return(df)
 }
+
+
+#' @export
+change_factor_to_number <- function (df, fact_cols) {
+  df[fact_cols] <- as.data.frame(apply(df[fact_cols], 2, strip_helper))
+  df
+}
