@@ -2,7 +2,7 @@
 % Please edit documentation in R/dataadviser.R
 \name{detect_outlier_single}
 \alias{detect_outlier_single}
-\title{Detect outliers for single variable}
+\title{Detect outliers for single column}
 \usage{
 detect_outlier_single(s, strategy = "3sigma", IQR_coef = 1.5,
   return_records = TRUE)
@@ -29,6 +29,6 @@ A boolean to indicate if there are outliers or records that are
 outliers
 }
 \description{
-Detect outliers for single variable
+Detect outliers for single column
 }
 

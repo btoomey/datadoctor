@@ -2,11 +2,14 @@
 % Please edit documentation in R/dataadviser.R
 \name{get_HHI}
 \alias{get_HHI}
-\title{Helper function to compute HHI}
+\title{Calculate the Hefindahl Hirschman index for the levels of a factor}
 \usage{
 get_HHI(s)
 }
+\arguments{
+\item{s}{A factor vector}
+}
 \description{
-Helper function to compute HHI
+Calculate the Hefindahl Hirschman index for the levels of a factor
 }
 
