@@ -34,7 +34,7 @@ cols_collinear <- function(df) {
                  model.matrix(~ . - 1, data = df)
                } else {
                  model.matrix(~ . - 1, data = df, contrasts.arg =
-                  lapply(theDF[, factorTest], contrasts, contrasts=FALSE))
+                  lapply(df[, factorTest], contrasts, contrasts=FALSE))
                }
   allLevels <- character(0)
   if (any(factorTest)) {
