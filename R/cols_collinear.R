@@ -30,7 +30,7 @@
 cols_collinear <- function(df) {
   # Address issues associated with factor columns
   factorTest <- sapply(df, function(x) class(x) == "factor")
-  theMatrix <- if (all(!factorTest)) {
+  theMatrix <- if (sum(as.numeric(factorTest)) < 2) {
                  model.matrix(~ . - 1, data = df)
                } else {
                  model.matrix(~ . - 1, data = df, contrasts.arg =
@@ -46,13 +46,16 @@ cols_collinear <- function(df) {
   # The core portion of the work
   xx <- crossprod(theMatrix)
   sxx <- svd(xx)
-  theD <- zapsmall(sxx$d)
+  theD <- zapsmall(sxx$d, digits = 8)
   # If there are no collinear groups, return NULL
   if (length(theD[theD == 0]) == 0) {
     return(NULL)
   }
-  zeroD <- (1:length(theD))[theD == 0] 
-  vmV <- varimax(sxx$v[, zeroD])
+  zeroD <- (1:length(theD))[theD == 0]
+  reducedV <- sxx$v[, zeroD]
+  # Avoid divide by zero errors
+  reducedV[reducedV == 0] <- 1e-17
+  vmV <- varimax(reducedV)
   theLoadings <- vmV$loadings
   loadingVec <- as.vector(theLoadings)
   loadingVec[abs(loadingVec) < 0.1] <- 0
@@ -60,6 +63,7 @@ cols_collinear <- function(df) {
   loadingMat <- matrix(loadingVec, nrow = loadingDim[1], ncol = loadingDim[2])
   colNames <- attr(theMatrix, "dimnames")[[2]]
   collinearList <- lapply(as.data.frame(loadingMat), function(x) colNames[x != 0])
+print(collinearList)
   # Remove the uninteresting case of all factor levels falling into a group
   if(length(allLevels) > 0) {
     allLevelsNum <- numeric(0)
@@ -84,7 +88,7 @@ cols_collinear <- function(df) {
     }
   }
   if (length(subGroupNum) > 0) {
-    subGroupNum <- subGroupNum[order(subGroupNum, decending = TRUE)]
+    subGroupNum <- subGroupNum[order(subGroupNum, decreasing = TRUE)]
     for (i in subGroupNum) {
       collinearList <- collinearList[-i]
     }
