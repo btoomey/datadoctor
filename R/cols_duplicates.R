@@ -14,6 +14,8 @@
 #'
 #' @seealso \code{\link{cols_duplicates}}, \code{\link{cols_continuous_duplicates}}
 #'
+#' @import GoodmanKruskal GKtauDataframe
+#'
 #' @export
 cols_factor_duplicates <- function(df) {
   theClasses <- sapply(df, class)
@@ -24,7 +26,6 @@ cols_factor_duplicates <- function(df) {
   }
   gkMat <- GKtauDataframe(df, includeNA = "no")
   diag(gkMat) <- 0
-  print(gkMat)
   dims <- attr(gkMat, "dim")
   colNames <- attr(gkMat, "dimnames")[[2]]
   gkDF <- data.frame(matrix(as.vector(gkMat), nrow = dims[1], ncol = dims[2]))
