@@ -5,6 +5,8 @@ Authors@R: person("Dan", "Putler", email = "dputler@alteryx.com", role = c("aut"
 Description: Data Doctor.
 Depends:
     R (>= 3.3.2)
+Imports:
+    GoodmanKruskal
 License: LGPL3
 Encoding: UTF-8
 LazyData: true
