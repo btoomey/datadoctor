@@ -20,10 +20,10 @@
 cols_factor_duplicates <- function(df) {
   theClasses <- sapply(df, class)
   theFactors <- names(theClasses)[theClasses == "factor"]
-  df <- df[, theFactors]
-  if (ncol(df) == 1) {
+  if (length(theFactors) < 2) {
     return(list())
   }
+  df <- df[, theFactors]
   gkMat <- GKtauDataframe(df, includeNA = "no")
   diag(gkMat) <- 0
   dims <- attr(gkMat, "dim")
@@ -75,10 +75,10 @@ cols_factor_duplicates <- function(df) {
 cols_continuous_duplicates <- function(df) {
   theClasses <- sapply(df, class)
   theNumbers <- names(theClasses)[theClasses != "factor"]
-  df <- df[, theNumbers]
-  if (ncol(df) == 1) {
+  if (length(theNumbers) < 2) {
     return(list())
   }
+  df <- df[, theNumbers]
   corMat <- abs(cor(df, use = "pairwise.complete.obs"))
   diag(corMat) <- 0
   corDF <- as.data.frame(corMat)
